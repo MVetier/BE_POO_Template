@@ -1,0 +1,19 @@
+class Distributeur {
+private:
+    // Ses "pièces détachées" (attributs)
+    CapteurTactile m_tactile;
+    // CapteurUltrason m_ultrason; maybe
+    Servomoteur m_servo;
+    EcranLCD m_ecran;
+    
+    // Ses données métier
+    std::vector<Repas> m_historique;
+    unsigned long m_dernierRepas;
+    int m_delaiMinimum;
+
+public:
+    Distributeur(/* numéros de pins */);
+    void initialiser();       // Initialise tous les capteurs/actionneurs
+    void verifierDemande();   // Regarde si le chien appuie sur le pavé
+    void distribuerPortion(); // Vérifie les règles, ouvre le servo, met à jour l'historique
+};
