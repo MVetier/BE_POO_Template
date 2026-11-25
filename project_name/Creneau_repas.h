@@ -10,12 +10,12 @@ private:
     bool dejaPris;          // Évite les doublons sur un même créneau
 
 public:
-    Creneau_Repas(unsigned int ndebut, unsigned int nfin);
+    Creneau_Repas(unsigned int ndebut, unsigned int nfin); // Constructeur pour initialiser le créneau avec un temps de début et de fin
 
-    bool estAutorise(unsigned int tempsActuelSec) ;
-    void marquerCommePris();
-    bool estDejaPris() ;
-    String disponibilite_heure() const;
+    bool estAutorise(unsigned int tempsActuelSec) ; // Vérifie si le créneau est autorisé à distribuer un repas à l'heure actuelle
+    void marquerCommePris(); // Marque le créneau comme ayant été utilisé pour éviter les doublons
+    bool estDejaPris(); // Vérifie si le créneau a déjà été utilisé
+    String disponibilite_heure() const; // Retourne une chaîne de caractères représentant la disponibilité du créneau (PRIS ou DISPO) avec les heures de début et de fin
 };
 
 #endif
