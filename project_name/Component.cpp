@@ -1,18 +1,13 @@
 #include "Component.h"
 
+Component::Component(uint8_t p, const std::string& n) : pin(p), nom(n) {}
 
-Component::Component(const std::string& nom, int pin)
-    : nom(nom), pin(pin), actif(false) {}
+Component::~Component() {}
 
-
-
-
-
-iostream &operator<<(iostream &os, const Component &c) {
-    os << "[Component] " << c.nom
-       << " (pin=" << c.pin
-       << ", actif=" << (c.actif ? "oui" : "non") << ")";
-    return os;
+const std::string& Component::getNom() const { 
+    return nom; 
 }
 
-//hey
+uint8_t Component::getPin() const { 
+    return pin; 
+}

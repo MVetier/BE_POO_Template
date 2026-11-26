@@ -1,29 +1,21 @@
 #ifndef COMPONENT_H
 #define COMPONENT_H
 
+#include <Arduino.h>
 #include <string>
-#include <iostream>
-
-using namespace std ; 
 
 class Component {
 protected:
-    string nom; // Nom du composant
-    int pin;         // Broche 
-    bool actif;      // Composant active ou non
+    uint8_t pin;
+    std::string nom;
 
 public:
-    Component(const string &nom, int pin);
+    Component(uint8_t p, const std::string& n);
+    virtual ~Component();
 
-
-    virtual ~Component(){} ; 
-
-  
-    virtual void initialiser(int mode = 0) = 0;
-  
-    friend iostream &operator<<(iostream &os, const Component &c);
+    virtual void init() = 0;
+    const std::string& getNom() const;
+    uint8_t getPin() const;
 };
 
-#endif 
-
-//hey
+#endif

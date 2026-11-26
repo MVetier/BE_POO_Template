@@ -1,0 +1,37 @@
+{
+    "configurations": [
+        {
+            "name": "Mac",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/Users/emmawang-fong/Library/Arduino15/packages/esp8266/hardware/esp8266/3.1.2/cores/esp8266",
+                "/Users/emmawang-fong/Library/Arduino15/packages/esp8266/hardware/esp8266/3.1.2/variants/nodemcu",
+                "/Users/emmawang-fong/Library/Arduino15/packages/esp8266/hardware/esp8266/3.1.2/tools/sdk/include",
+                "/Users/emmawang-fong/Library/Arduino15/packages/esp8266/hardware/esp8266/3.1.2/tools/sdk/lwip2/include",
+                "/Users/emmawang-fong/Library/Arduino15/packages/esp8266/hardware/esp8266/3.1.2/tools/sdk/libc/xtensa-lx106-elf/include",
+                "/Users/emmawang-fong/Library/Arduino15/packages/esp8266/hardware/esp8266/3.1.2/libraries/**"
+            ],
+            "defines": [
+                "__ets__",
+                "ICACHE_FLASH",
+                "NONOSDK22x_190703=1",
+                "F_CPU=80000000L",
+                "LWIP_OPEN_SRC",
+                "TCP_MSS=536",
+                "LWIP_FEATURES=1",
+                "LWIP_IPV6=0",
+                "ARDUINO=10819",
+                "ARDUINO_ESP8266_NODEMCU_ESP12E",
+                "ARDUINO_ARCH_ESP8266",
+                "LED_BUILTIN=2",
+                "FLASHMODE_DIO",
+                "ESP8266"
+            ],
+            "compilerPath": "/Users/emmawang-fong/Library/Arduino15/packages/esp8266/tools/xtensa-lx106-elf-gcc/3.1.0-gcc10.3-e5f9fec/bin/xtensa-lx106-elf-g++",
+            "cStandard": "gnu17",
+            "cppStandard": "gnu++17",
+            "intelliSenseMode": "gcc-x64"
+        }
+    ],
+    "version": 4
+}

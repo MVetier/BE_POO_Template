@@ -1,17 +1,16 @@
-#ifndef COMPONENT_H
-#define COMPONENT_H
+#ifndef ACTIONNEUR_H
+#define ACTIONNEUR_H
 
-class Actionneur : public Component
-{
-    protected : 
+#include "Component.h"
+#include <string>
 
-    public : 
-        Actionneur() ; 
-        void activer();
-        void desactiver();
-        
-}
+class Actionneur : public Component {
+public:
+    Actionneur(uint8_t p, const std::string& n);
+    virtual ~Actionneur() = default;
 
-#endif 
+    virtual void activer() = 0;
+    virtual void desactiver();
+};
 
-//hey 
+#endif

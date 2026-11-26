@@ -1,17 +1,5 @@
 #include "Actionneur.h"
 
-Actionneur :: Actionneur ()
-{
+Actionneur::Actionneur(uint8_t p, const std::string& n) : Component(p, n) {}
 
-}
-
-void Actionneur :: activer() 
-{
-
-}
-
-void Actionneur :: desactiver() 
-{
-
-}
-//hey
+void Actionneur::desactiver() {}
