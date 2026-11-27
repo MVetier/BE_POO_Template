@@ -1,10 +1,10 @@
 #include "Creneau_Repas.h"
-
+#include <Arduino.h>
 Creneau_Repas::Creneau_Repas(unsigned int ndebut, unsigned int nfin) : debut(ndebut), fin(nfin), dejaPris(false) {}
 
-bool Creneau_Repas::estAutorise(unsigned int tempsActuelSec) 
+bool Creneau_Repas::estAutorise(unsigned int tempsActuel)
 {
-    return (!dejaPris && tempsActuelSec >= debut && tempsActuelSec <= fin);
+    return (!dejaPris && tempsActuel >= debut && tempsActuel <= fin);
 }
 
 void Creneau_Repas::marquerCommePris()
@@ -12,9 +12,14 @@ void Creneau_Repas::marquerCommePris()
     dejaPris = true;
 }
 
-bool Creneau_Repas::estDejaPris() 
+bool Creneau_Repas::estDejaPris()
 {
     return dejaPris;
+}
+
+void Creneau_Repas::resetDejaPris()
+{
+    dejaPris = false;
 }
 
 String Creneau_Repas::disponibilite_heure() const
